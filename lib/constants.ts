@@ -1,0 +1,13 @@
+export const SITE_NAME = "k-factory"
+export const SITE_URL = "https://www.oxabags.com/"
+export const SITE_DESCRIPTION = "Automobile Spare parts Sales & Service especially for Auto Rickshaw and Bikes"
+export const SITE_KEYWORDS = "Jute bags, Cotton Bag, Canvas Bags, File Folders, Denim Bags, Pouches"
+export const SITE_CATEGORY = "Shopping"
+export const SITE_IMAGE = "https://www.oxabags.com/og.webp"
+export const OWNER_NAME = "Kamal"
+export const OWNER_EMAIL = "mohammedmohsin203@gmail.com"
+export const OWNER_PHONE_1 = "6381112323"
+export const OWNER_PHONE_2 = "9790892164"
+export const COMPANY_NAME = "K-Factory"
+export const COMPANY_ADDRESS = "1768, 115/1, General Kumaramangalam Colony, Perambur, Chennai, Tamil Nadu 600082"
+

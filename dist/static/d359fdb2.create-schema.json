@@ -1,0 +1,259 @@
+[
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              },
+              {
+                "flag": "min",
+                "constraint": 0
+              },
+              {
+                "flag": "greaterThan",
+                "constraint": 100
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "id",
+        "type": "number",
+        "title": "Part Number"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "title": "Part Name"
+      },
+      {
+        "of": [
+          {
+            "type": "image"
+          }
+        ],
+        "name": "images",
+        "type": "array",
+        "title": "Product Images"
+      },
+      {
+        "name": "brand",
+        "type": "string",
+        "title": "Manufacturer/Brand"
+      },
+      {
+        "description": "List of compatible vehicle makes and models",
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "compatibleVehicles",
+        "type": "array"
+      },
+      {
+        "fields": [
+          {
+            "name": "from",
+            "type": "number",
+            "title": "From Year"
+          },
+          {
+            "name": "to",
+            "type": "number",
+            "title": "To Year"
+          }
+        ],
+        "name": "yearRange",
+        "type": "object"
+      },
+      {
+        "options": {
+          "list": [
+            "New",
+            "Refurbished",
+            "Used"
+          ]
+        },
+        "name": "condition",
+        "type": "string"
+      },
+      {
+        "fields": [
+          {
+            "name": "material",
+            "type": "string"
+          },
+          {
+            "name": "weight",
+            "type": "string"
+          },
+          {
+            "name": "dimensions",
+            "type": "string"
+          },
+          {
+            "name": "oemNumber",
+            "type": "string",
+            "title": "OEM Number"
+          }
+        ],
+        "name": "specifications",
+        "type": "object"
+      },
+      {
+        "name": "price",
+        "type": "number"
+      },
+      {
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "features",
+        "type": "array"
+      },
+      {
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "name": "installation",
+        "type": "text",
+        "title": "Installation Guide"
+      },
+      {
+        "name": "warranty",
+        "type": "string",
+        "title": "Warranty Information"
+      },
+      {
+        "options": {
+          "source": "name"
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "slug",
+        "type": "slug"
+      },
+      {
+        "name": "showOnHomePage",
+        "type": "boolean",
+        "title": "Show on Home Page"
+      },
+      {
+        "name": "inStock",
+        "type": "boolean"
+      },
+      {
+        "to": [
+          {
+            "type": "category"
+          }
+        ],
+        "name": "category",
+        "type": "reference",
+        "title": "Part Category"
+      },
+      {
+        "to": [
+          {
+            "type": "vehicleType"
+          }
+        ],
+        "name": "vehicleType",
+        "type": "reference"
+      }
+    ],
+    "name": "product",
+    "type": "document",
+    "title": "Auto Parts"
+  },
+  {
+    "fields": [
+      {
+        "name": "name",
+        "type": "string",
+        "title": "Category Name"
+      },
+      {
+        "options": {
+          "source": "name"
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "slug",
+        "type": "slug"
+      },
+      {
+        "name": "description",
+        "type": "text",
+        "title": "Category Description"
+      },
+      {
+        "name": "image",
+        "type": "image",
+        "title": "Category Image"
+      }
+    ],
+    "name": "category",
+    "type": "document",
+    "title": "Categories"
+  },
+  {
+    "fields": [
+      {
+        "options": {
+          "list": [
+            "Car",
+            "Motorcycle",
+            "Commercial Vehicle"
+          ]
+        },
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "options": {
+          "source": "name"
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "slug",
+        "type": "slug"
+      }
+    ],
+    "name": "vehicleType",
+    "type": "document",
+    "title": "Vehicle Types"
+  }
+]
