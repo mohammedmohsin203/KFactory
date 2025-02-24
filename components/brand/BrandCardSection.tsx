@@ -5,12 +5,12 @@ import { urlForImage } from "@/sanity/lib/image";
 import { ArrowUpRight } from "lucide-react";
 import { BrandsQueryResult, CategoriesQueryResult } from "@/sanity/types";
 
-export default function CategoryCardSection({category} : {category:BrandsQueryResult}) {
+export default function BrandCardSection({category} : {category:BrandsQueryResult}) {
   return (
     <div className="bg-gray-100 rounded-lg">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl py-4 sm:py-8 lg:max-w-none lg:py-16">
-          <h2 className="text-2xl font-bold text-gray-900">Collections </h2>
+          <h2 className="text-2xl font-bold text-gray-900">Brands </h2>
 
           <div className="mt-2 space-12 grid-cols-1 grid lg:grid-cols-3 gap-6">
             {category.map((cat, index: number) => (

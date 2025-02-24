@@ -11,6 +11,7 @@ import {
 } from "@/sanity/types";
 import { Suspense } from "react";
 import Appointment from "@/components/Appointment";
+import BrandCardSection from "@/components/brand/BrandCardSection";
 
 export default async function Home() {
   const products = await client.fetch<FeaturedProductsQueryResult>(
@@ -24,7 +25,7 @@ export default async function Home() {
     <main className="px-2">
       <Billboard />
       <CategoryCardSection category={category} />
-      <CategoryCardSection category={brand} />
+      <BrandCardSection category={brand} />
       <Suspense fallback={<ProductsMarqueeWrapperSkeleton />}>
         <ProductsMarqueeWrapper products={products} />
       </Suspense>
